@@ -53,28 +53,9 @@
   <div class="bubble in">ReachBase demo (by Craig Rittichier): You're opted in to AI intake demo texts. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out.</div>
 </div>
 
-<h2>Or fill this out <span class="soon">Coming soon</span></h2>
-<p>Online sign-up is coming soon. The form below shows how it will work: enter your name and mobile number, pick a sample trade, and check the consent box. The checkbox is <strong>not</strong> pre-checked; you must check it yourself to agree. Until online sign-up is live, please text START as shown above.</p>
-
-<form id="optin" novalidate>
-  <label class="field" for="name">Name</label>
-  <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
-  <label class="field" for="phone">Mobile phone number</label>
-  <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555">
-  <label class="field" for="trade">Sample trade to try</label>
-  <select id="trade" name="trade">
-    <option value="plumbing">Plumbing</option>
-    <option value="garage-door">Garage door</option>
-    <option value="bail-bonds">Bail bonds</option>
-  </select>
-  <div class="consent">
-    <input type="checkbox" id="sms_consent" name="sms_consent" value="yes">
-    <label for="sms_consent">I agree to receive ReachBase demo text messages from Craig Rittichier at the number provided, including AI intake questions, scheduling, follow-ups, reminders, and handoff to a person by text or call. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</label>
-  </div>
-  <p class="note">See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">SMS Terms of Service</a>.</p>
-  <button type="submit">Sign up (coming soon)</button>
-  <div class="thanks" id="thanks" role="status">Online sign-up is coming soon. Nothing was submitted. In the meantime, text <strong>START</strong> to <a href="sms:+14705944820">+1 (470) 594-4820</a> to try the demo.</div>
-</form>
+<h2>Consent</h2>
+<p>By texting START, you agree to receive ReachBase demo text messages from Craig Rittichier at the number you text from, including AI intake questions, scheduling, follow-ups, reminders, and handoff to a person by text or call. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</p>
+<p class="note">See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">SMS Terms of Service</a>.</p>
 
 <h2>How to opt out</h2>
 <p>Reply <strong>STOP</strong> to any message at any time. You will receive one final confirmation and no further messages:</p>
@@ -102,11 +83,5 @@
   <a href="index.html">Home</a> &middot; <a href="opt-in.html">Try the demo / SMS opt-in</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">SMS Terms of Service</a>
 </footer>
 </main>
-<script>
-document.getElementById('optin').addEventListener('submit', function (e) {
-  e.preventDefault();
-  document.getElementById('thanks').style.display = 'block';
-});
-</script>
 </body>
 </html>
