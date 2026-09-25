@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SMS Opt-In - ReachBase</title>
+<title>Try the ReachBase AI Intake Demo - built by Craig Rittichier</title>
 <style>
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#222;background:#fff;margin:0;padding:0}
   main{max-width:760px;margin:0 auto;padding:24px 18px 48px}
@@ -15,12 +15,13 @@
   ul{padding-left:1.3em}
   form{border:1px solid #ccc;border-radius:8px;padding:18px;background:#fafafa}
   label.field{display:block;font-weight:600;margin-top:10px}
-  input[type=text],input[type=tel]{width:100%;box-sizing:border-box;padding:8px;font-size:1em;border:1px solid #bbb;border-radius:4px;margin-top:4px}
+  input[type=text],input[type=tel],select{width:100%;box-sizing:border-box;padding:8px;font-size:1em;border:1px solid #bbb;border-radius:4px;margin-top:4px;background:#fff}
   .consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:.95em}
   .consent input{margin-top:5px;flex:0 0 auto;width:18px;height:18px}
   button{margin-top:16px;padding:10px 20px;font-size:1em;background:#0b5cad;color:#fff;border:0;border-radius:4px;cursor:pointer}
-  .thanks{display:none;margin-top:12px;padding:10px;background:#e8f4e8;border:1px solid #9c9;border-radius:4px}
+  .thanks{display:none;margin-top:12px;padding:10px;background:#fff7e0;border:1px solid #e0c060;border-radius:4px}
   .note{font-size:.85em;color:#555}
+  .soon{display:inline-block;font-size:.75em;font-weight:600;background:#fff2c2;color:#6b5200;border:1px solid #e0c060;border-radius:10px;padding:1px 8px;vertical-align:middle}
   .sms{max-width:420px;border:1px solid #ccc;border-radius:12px;padding:14px;background:#f4f4f6}
   .bubble{padding:8px 12px;border-radius:14px;margin:8px 0;max-width:85%;font-size:.95em}
   .out{background:#0b84ff;color:#fff;margin-left:auto;width:fit-content}
@@ -32,40 +33,47 @@
 </head>
 <body>
 <main>
-<h1>SMS Opt-In</h1>
-<p class="meta">ReachBase Text Messaging &middot; Sender number: +1 (470) 594-4820</p>
+<h1>Try the ReachBase AI intake demo</h1>
+<p class="meta">Built by Craig Rittichier &middot; Sender number: +1 (470) 594-4820</p>
+<p><em>ReachBase is a free-trial demo; it is not yet sold to any business.</em></p>
 
-<p>ReachBase sends conversational text messages about <strong>water heater service</strong>: replies to your service inquiries, appointment scheduling and confirmations, and follow-ups/callbacks. You only receive texts from ReachBase if you opt in using one of the two methods below.</p>
+<p>ReachBase is an AI receptionist and SMS intake service being built by Craig Rittichier, a sole proprietor. The demo shows one AI intake assistant for three sample trades: <strong>plumbing</strong>, <strong>garage door repair</strong>, and <strong>bail bonds</strong>. ReachBase does not text on behalf of any other company. Demo texts go only to people who opt in using one of the two methods below.</p>
 
 <div class="box">
-<p><strong>Program disclosures:</strong> ReachBase Text Messaging. Messages are about your water heater service request (inquiry replies, appointment scheduling, confirmations, and follow-ups). Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">SMS Terms of Service</a>.</p>
+<p><strong>Program disclosures:</strong> ReachBase demo texts from Craig Rittichier: AI intake questions, scheduling, and follow-ups for the sample trade you choose. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. Phone numbers are never purchased or shared. Mobile opt-in data and consent are not shared with third parties or affiliates for marketing or promotional purposes. See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">SMS Terms of Service</a>.</p>
 </div>
 
-<h2>Option 1: Opt in with our web form</h2>
-<p>Enter your name and mobile number and check the consent box. The checkbox is <strong>not</strong> pre-checked; you must check it yourself to agree to receive texts.</p>
+<h2>Option 1: Web form <span class="soon">Coming soon</span></h2>
+<p>Online sign-up is coming soon. The form below shows how it will work: enter your name and mobile number, pick a sample trade, and check the consent box. The checkbox is <strong>not</strong> pre-checked; you must check it yourself to agree. Until online sign-up is live, please use Option 2 and text START.</p>
 
 <form id="optin" novalidate>
   <label class="field" for="name">Name</label>
   <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
   <label class="field" for="phone">Mobile phone number</label>
   <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555">
+  <label class="field" for="trade">Sample trade to try</label>
+  <select id="trade" name="trade">
+    <option value="plumbing">Plumbing</option>
+    <option value="garage-door">Garage door</option>
+    <option value="bail-bonds">Bail bonds</option>
+  </select>
   <div class="consent">
     <input type="checkbox" id="sms_consent" name="sms_consent" value="yes">
-    <label for="sms_consent">By checking this box, I agree to receive text messages from ReachBase about my water heater service request, including appointment scheduling, confirmations, and follow-ups, at the number provided. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms</a>.</label>
+    <label for="sms_consent">I agree to receive ReachBase demo text messages from Craig Rittichier at the number provided, including AI intake questions, scheduling, and follow-ups. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase.</label>
   </div>
-  <button type="submit">Submit</button>
-  <div class="thanks" id="thanks">Thanks &mdash; you'll receive a confirmation text.</div>
-  <p class="note">The SMS consent checkbox is optional; you can request service without agreeing to receive texts.</p>
+  <p class="note">See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">SMS Terms of Service</a>.</p>
+  <button type="submit">Sign up (coming soon)</button>
+  <div class="thanks" id="thanks" role="status">Online sign-up is coming soon. Nothing was submitted. In the meantime, text <strong>START</strong> to <a href="sms:+14705944820">+1 (470) 594-4820</a> to try the demo.</div>
 </form>
 
-<h2>Option 2: Text to join</h2>
-<p>Text the keyword <strong>START</strong> (or <strong>WATER</strong>) to <a href="sms:+14705944820">+1 (470) 594-4820</a>. You will receive this confirmation message:</p>
+<h2>Option 2: Text START</h2>
+<p>Text <strong>START</strong> to <a href="sms:+14705944820">+1 (470) 594-4820</a>. You will receive this confirmation message:</p>
 
-<div class="sms" aria-label="Example text message conversation">
+<div class="sms" aria-label="Example opt-in text conversation">
   <p class="who r">You</p>
   <div class="bubble out">START</div>
-  <p class="who">ReachBase (470) 594-4820</p>
-  <div class="bubble in">ReachBase: You're subscribed to texts about your water heater service request. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out.</div>
+  <p class="who">ReachBase demo (470) 594-4820</p>
+  <div class="bubble in">ReachBase demo (by Craig Rittichier): You're opted in to AI intake demo texts. Msg frequency varies. Msg &amp; data rates may apply. Reply HELP for help, STOP to opt out.</div>
 </div>
 
 <h2>How to opt out</h2>
@@ -73,16 +81,25 @@
 <div class="sms" aria-label="Example opt-out conversation">
   <p class="who r">You</p>
   <div class="bubble out">STOP</div>
-  <p class="who">ReachBase (470) 594-4820</p>
-  <div class="bubble in">ReachBase: You're unsubscribed and will receive no more messages. Reply START to resubscribe.</div>
+  <p class="who">ReachBase demo (470) 594-4820</p>
+  <div class="bubble in">ReachBase demo: You're unsubscribed and will receive no more texts. Reply START to resubscribe.</div>
 </div>
-<p>Reply <strong>HELP</strong> for help, or contact us at <a href="tel:+14705944820">+1 (470) 594-4820</a> or <a href="mailto:craigsrittichier@gmail.com">craigsrittichier@gmail.com</a>.</p>
+
+<h2>How to get help</h2>
+<p>Reply <strong>HELP</strong> to any message:</p>
+<div class="sms" aria-label="Example help conversation">
+  <p class="who r">You</p>
+  <div class="bubble out">HELP</div>
+  <p class="who">ReachBase demo (470) 594-4820</p>
+  <div class="bubble in">ReachBase demo, built by Craig Rittichier. For help, email craigsrittichier@gmail.com. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out.</div>
+</div>
 
 <h2>Privacy</h2>
-<p><strong>Mobile opt-in data and consent are not shared with third parties or affiliates for marketing or promotional purposes.</strong> See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">SMS Terms of Service</a> for details.</p>
+<p><strong>Phone numbers are never purchased or shared. Mobile opt-in data and consent are not shared with third parties or affiliates for marketing or promotional purposes.</strong> See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">SMS Terms of Service</a> for details.</p>
 
 <footer>
-  <a href="index.html">Home</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">SMS Terms of Service</a>
+  <p>ReachBase is a product in development by Craig Rittichier, sole proprietor. Contact: <a href="mailto:craigsrittichier@gmail.com">craigsrittichier@gmail.com</a></p>
+  <a href="index.html">Home</a> &middot; <a href="opt-in.html">Try the demo / SMS opt-in</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">SMS Terms of Service</a>
 </footer>
 </main>
 <script>
